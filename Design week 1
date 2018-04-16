@@ -1,0 +1,29 @@
+Design 1 - Progress report
+Jette Korthals Altes, Steven Kuhnen, Sylvie Langhout, Lucas Lumeij, Marieke van Maanen
+
+Introduction
+We stumbled upon the Happy Planet Index. During our brainstorm session we thought of things that make people happy. The first thing that came to mind was alcohol. Therefore, we are interested in how happiness and alcohol consumption relate to each other. 
+
+Goal
+For this project we aim to visualize a relation between happiness and alcohol by showing the Happy Planet Index Score and average pure alcohol consumption per country. 
+
+Database 1
+The Happy Planet Index (HPI) displays the happiness of 176 countries around the world. This database was introduced by the New Economics Foundation (NEF). The HPI score of each country is calculated by its average subjective life satisfaction, life expectancy at birth and ecological footprint per capita.  
+http://happyplanetindex.org/ 
+
+Database 2
+The second database, from the World Bank, displays the total alcohol consumption per capita of 246 countries. These are projected estimates in liters of pure alcohol of the population of 15+ years of age. 
+https://data.worldbank.org/indicator/SH.ALC.PCAP.LI 
+
+Plan of action
+-	Retrieve necessary data from databases 
+-	Compare datasets and make them compatible (missing countries etc.)
+-	Think of best method to visualize
+-	Create story around visualization
+-	Make figures/ animations
+-	Make video
+k.org/indicator/SH.ALC.PCAP.LI
+link data.txt
+Open with Google Docs
+https://data.worldbank.org/indicator/SH.ALC.PCAP.LI
+link data.txt
