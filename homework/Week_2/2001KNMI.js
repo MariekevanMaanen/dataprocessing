@@ -197,5 +197,5 @@ function reqListener () {
 
 var oReq = new XMLHttpRequest();
 oReq.addEventListener("load", reqListener);
-oReq.open("GET", "https://github.com/MariekevanMaanen/dataprocessing/blob/master/homework/Week_2/rawdata.txt");
+oReq.open("GET", "rawdata.txt");
 oReq.send();
