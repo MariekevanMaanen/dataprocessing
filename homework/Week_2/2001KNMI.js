@@ -199,3 +199,4 @@ var oReq = new XMLHttpRequest();
 oReq.addEventListener("load", reqListener);
 oReq.open("GET", "rawdata.txt");
 oReq.send();
+//https://github.com/MariekevanMaanen/dataprocessing/blob/master/homework/Week_2/rawdata.txt
