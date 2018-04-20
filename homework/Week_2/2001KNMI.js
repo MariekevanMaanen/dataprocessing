@@ -9,11 +9,34 @@ Line graph of the average temperature in De Bilt in 2001.
 **/
 
 function reqListener () {
-	// get rawdata of average temperature of 1963
-	var rawdata = this.responseText;
+	function createTransform(domain, range){
+		// domain is a two-element array of the data bounds [domain_min, domain_max]
+		// range is a two-element array of the screen bounds [range_min, range_max]
+		// this gives you two equations to solve:
+		// range_min = alpha * domain_min + beta
+		// range_max = alpha * domain_max + beta
+	 	// a solution would be:
+
+	    var domain_min = domain[0]
+	    var domain_max = domain[1]
+	    var range_min = range[0]
+	    var range_max = range[1]
+
+	    // formulas to calculate the alpha and the beta
+	   	var alpha = (range_max - range_min) / (domain_max - domain_min)
+	    var beta = range_max - alpha * domain_max
+
+	    // returns the function for the linear transformation (y= a * x + b)
+	    return function(x){
+	      return alpha * x + beta;
+	    }
+	}
+
+	// get rawdata of average temperature of 2001
+	var raw_data = this.responseText;
 
 	//create array of dates and temperatures with a maximum of 365 days
-	var day_temp = rawdata.split("\n", 365);
+	var day_temp = raw_data.split("\n", 365);
 
 	var dateList = [];
 	var tempList = [];
@@ -38,29 +61,6 @@ function reqListener () {
 		tempList.push(Number(split_lines[1]));
 	};
 
-	function createTransform(domain, range){
-		// domain is a two-element array of the data bounds [domain_min, domain_max]
-		// range is a two-element array of the screen bounds [range_min, range_max]
-		// this gives you two equations to solve:
-		// range_min = alpha * domain_min + beta
-		// range_max = alpha * domain_max + beta
-	 	// a solution would be:
-
-	    var domain_min = domain[0]
-	    var domain_max = domain[1]
-	    var range_min = range[0]
-	    var range_max = range[1]
-
-	    // formulas to calculate the alpha and the beta
-	   	var alpha = (range_max - range_min) / (domain_max - domain_min)
-	    var beta = range_max - alpha * domain_max
-
-	    // returns the function for the linear transformation (y= a * x + b)
-	    return function(x){
-	      return alpha * x + beta;
-	    }
-	}
-
 	// get minimum and maximum temperature
 	var minTemp = Math.min(...tempList);
 	var maxTemp = Math.max(...tempList);
@@ -75,6 +75,7 @@ function reqListener () {
 	var minWidth = 50;
 	var maxWidth = 550;
 
+	// transform temperature coordinates and store them in new list
 	var temperatures = [];
 	var temp_transformation = createTransform([maxTemp, minTemp], [minHeight, maxHeight]);
 		
@@ -84,6 +85,7 @@ function reqListener () {
 		temperatures.push(temp);
 	}
 
+	// transform date coordinates and store them in new list
 	var dates = [];
 	var date_transformation = createTransform([minDate, maxDate], [minWidth, maxWidth]);
 
@@ -137,14 +139,14 @@ function reqListener () {
 
 	// draw stripes and month labels on x-axis
 	ctx.beginPath();
-	month_period = [];
+	month_duration = [];
 
-	// iterate over days, increasing with 1 month (± 31 days)
+	// iterate over days, increase with 1 month (± 31 days)
 	for (var i = 0; i <= 365; i+=31) {
 		var m = date_transformation(dateList[i].getTime());
 
 		// store months coordinates in a list
-		month_period.push(m)
+		month_duration.push(m)
 
 		// draw stripes for every month
 		ctx.moveTo(m, 250)
@@ -154,11 +156,11 @@ function reqListener () {
 	// draw month labels on x-axis
 	for (var i = 0; i < months.length; i++) {
 		ctx.font = "8pt Arial";
-		ctx.fillText(months[i], month_period[i] + 11, 270)
+		ctx.fillText(months[i], month_duration[i] + 11, 270)
 	}
 	ctx.stroke();
 
-	// set year at the beginning of the x-axis
+	// set year diagonal at the beginning of the x-axis
 	ctx.save();
 	ctx.font = "8pt Arial";
 	ctx.translate(30, 290)
@@ -169,34 +171,52 @@ function reqListener () {
 	// draw stripes and temperature scaling on y-axis
 	ctx.beginPath();
 
+	// lowest value on y-axis in 0.1 degrees celsius
+	var start_y_axis = -50;
+	
+	console.log(correction)
 	// iterate over temperature
-	for (var i = -50; i <= maxTemp; i+=50) {
+	for (var i = start_y_axis; i <= maxTemp; i+=50) {
 		var n = temp_transformation(i);
 
 		// draw stripes for temperatures with interval of 5 degrees
 		ctx.moveTo(50, n)
 		ctx.lineTo(45, n)
 
+		//converts temperature in 0.1 degrees celsius to 1
+		var convert_celcius = i / 10;
+
 		ctx.font = "8pt Arial";
-		ctx.fillText(i/10, 25, n + 3);
+		ctx.fillText(convert_celcius, 25, n + 3);
 	}
 	ctx.stroke();
 
-
+	// draw line grapgh of average temperature of each day
 	ctx.beginPath();
 
+	// corrects for difference between minimum temperature and first y-axis value
+	var correction = start_y_axis - minTemp;
+	
 	// iterate over dates and temperatures for each day
 	for(var i = 0; i < dates.length; i++)
 	{
 		var x = dates[i];
 		var y = temperatures[i];
-		ctx.lineTo(x, y);
+		ctx.lineTo(x, y + correction);
 	}
+	ctx.stroke();
+
+	// draw dashed line of 0 degrees celsius
+	ctx.beginPath();
+	ctx.strokeStyle='red';
+	ctx.setLineDash([5,5]);
+	ctx.moveTo(minWidth, temp_transformation(0));
+	ctx.lineTo(maxWidth, temp_transformation(0));
 	ctx.stroke();
 }
 
+// request to get data from browser
 var oReq = new XMLHttpRequest();
 oReq.addEventListener("load", reqListener);
-oReq.open("GET", "rawdata.txt");
+oReq.open("GET", "https://raw.githubusercontent.com/MariekevanMaanen/dataprocessing/master/homework/Week_2/rawdata.txt");
 oReq.send();
-//https://github.com/MariekevanMaanen/dataprocessing/blob/master/homework/Week_2/rawdata.txt
