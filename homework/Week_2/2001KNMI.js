@@ -10,12 +10,11 @@ Line graph of the average temperature in De Bilt in 2001.
 
 function reqListener () {
 	function createTransform(domain, range){
-		// domain is a two-element array of the data bounds [domain_min, domain_max]
-		// range is a two-element array of the screen bounds [range_min, range_max]
-		// this gives you two equations to solve:
-		// range_min = alpha * domain_min + beta
-		// range_max = alpha * domain_max + beta
-	 	// a solution would be:
+		/**
+		transformation of raw data to canvas coordinate system to draw graphs
+		domain is a two-element array of the data bounds [domain_min, domain_max]
+		range is a two-element array of the screen bounds [range_min, range_max]
+	 	**/
 
 	    var domain_min = domain[0]
 	    var domain_max = domain[1]
@@ -65,7 +64,7 @@ function reqListener () {
 	var minTemp = Math.min(...tempList);
 	var maxTemp = Math.max(...tempList);
 
-	// get first and latest dates in milisec
+	// get first and latest date
 	var minDate = Math.min(...dateList);
 	var maxDate = Math.max(...dateList);
 
@@ -113,17 +112,15 @@ function reqListener () {
 	ctx.font = "16pt Arial";
 	ctx.fillText(title, 120 , 20);
 
-	// draw x axis
+	// draw x-axis including label
 	ctx.beginPath();
 	ctx.moveTo(minWidth, maxHeight);
 	ctx.lineTo(maxWidth, maxHeight);
 	ctx.stroke();
-
-	// draw x-axis label
 	ctx.font = "12pt Arial"
 	ctx.fillText(x_axis, 200, 300)
 
-	// draw y axis
+	// draw y-axis
 	ctx.beginPath();
 	ctx.moveTo(minWidth, minHeight);
 	ctx.lineTo(minWidth,maxHeight);
@@ -137,18 +134,18 @@ function reqListener () {
 	ctx.fillText(y_axis, 0, 0);
 	ctx.restore();
 
-	// draw stripes and month labels on x-axis
+	// draw marks and month labels on x-axis
 	ctx.beginPath();
 	month_duration = [];
 
-	// iterate over days, increase with 1 month (± 31 days)
+	// devide days in months (31 days per month)
 	for (var i = 0; i <= 365; i+=31) {
 		var m = date_transformation(dateList[i].getTime());
 
 		// store months coordinates in a list
 		month_duration.push(m)
 
-		// draw stripes for every month
+		// draw marks for every month
 		ctx.moveTo(m, 250)
 		ctx.lineTo(m, 255)
 	}
@@ -160,7 +157,7 @@ function reqListener () {
 	}
 	ctx.stroke();
 
-	// set year diagonal at the beginning of the x-axis
+	// set year diagonally at the beginning of the x-axis
 	ctx.save();
 	ctx.font = "8pt Arial";
 	ctx.translate(30, 290)
@@ -168,18 +165,17 @@ function reqListener () {
 	ctx.fillText(year, 5, 5);
 	ctx.restore();
 
-	// draw stripes and temperature scaling on y-axis
+	// draw marks and temperature scaling on y-axis
 	ctx.beginPath();
 
 	// lowest value on y-axis in 0.1 degrees celsius
 	var start_y_axis = -50;
-	
-	console.log(correction)
-	// iterate over temperature
+
+	// set temperature marks in steps of 50 (scale 0.1)
 	for (var i = start_y_axis; i <= maxTemp; i+=50) {
 		var n = temp_transformation(i);
 
-		// draw stripes for temperatures with interval of 5 degrees
+		// draw marks for temperatures with interval of 5 degrees
 		ctx.moveTo(50, n)
 		ctx.lineTo(45, n)
 
