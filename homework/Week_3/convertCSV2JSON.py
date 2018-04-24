@@ -12,22 +12,10 @@ import json
 with open("population_south_america.csv", "r") as f:
 	reader = csv.DictReader(f)
 	rows = list(reader)
-	print(rows)
 
+# create object of CSV content
+obj = {"Data": rows}
 
 # write CSV content to JSON file
 with open("population_south_america.json", "w") as f:
-	json.dump(rows, f)
-	
-
-# csvfile = open("population_south_america.csv", "r")
-# jsonfile = open("population_south_america.json", "w")
-
-# names = ("Country", "Population in 2018")
-# reader = csv.DictReader(csvfile, names)
-# for row in reader:
-# 	json.dump(row, jsonfile)
-# 	jsonfile.write("\n")
-
-# csvfile.close()
-# jsonfile.close()
+	 json.dump(obj, f)
