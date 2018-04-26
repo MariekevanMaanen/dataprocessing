@@ -1,0 +1,11 @@
+body {
+    text-align: center;
+    font: 12px Arial;
+    background-color: lightgrey;
+}
+
+h1 {
+	text-align: center;
+	font: 26px Arial;
+	font-weight: bold;
+}

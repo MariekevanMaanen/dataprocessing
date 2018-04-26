@@ -9,13 +9,13 @@ import csv
 import json
 
 # open CSV file
-with open("population_south_america.csv", "r") as f:
+with open("slave_exports.csv", "r") as f:
 	reader = csv.DictReader(f)
 	rows = list(reader)
 
-# create object of CSV content
-obj = {"Data": rows}
+# # create object of CSV content
+# obj = {"data": rows}
 
 # write CSV content to JSON file
-with open("population_south_america.json", "w") as f:
-	 json.dump(obj, f)
+with open("slave_exports.json", "w") as f:
+	 json.dump(rows, f)
