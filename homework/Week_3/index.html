@@ -1,57 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
     <head>
         <meta charset="utf-8">
-        <title>Interactive D3 Barchart</title>
         <script src="https://d3js.org/d3.v3.min.js"></script>
-        <!-- <script src="slave_exports.json"></script> -->
-        <script src="bargraph.js" type="text/javascript"></script>
+        <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
         <link rel="stylesheet" type="text/css" href="bargraph.css">
-        
-<!--         <script type="text/javascript">
-        	d3.select("body").append("p").text("Total Slave Exports from 1400 to 1900 by Country");
-    	</script> -->
     </head>
+
     <body>
-    	<h1>Total Slave Exports from 1400 to 1900 by Country</h1>
-    	<p>Marieke van Maanen (10888640)</p>
-    	<p>Source: <a href="http://cega.berkeley.edu/assets/miscellaneous_files/wgape/12_Nunn.pdf">The Long-Term Effects of Africa's Slave Trades by Nathan Nunn (2006)</a></p>
-        <script type="text/javascript">
-
-/*    	    d3.select("body").append("p").text("Name: Marieke van Maanen, StudentNumber: 10888640");
-    	    d3.select("body").append("p").text("This bar graph visualizes slave exports by country")
-
-    	    d3.json("/data/slave_exports.json", function(d) {
-    	    	return {
-    	    		country : d.country,
-    	    		All Slave Trades : d.all_slave_trades
-    	    	};
-    	    }, function(data) {
-    	    	console.log(data[0]);
-  
-    	    })
-    	    var dataset = [ 5, 10, 15, 20, 25 ];
-			d3.select("body").selectAll("p").data(dataset).enter().append("p")
-				.style("width", function(d) { return d + "px"; })
-				.text(function(d) {return d; })*/
-
-
-        </script>
+        <script src="bargraph.js"></script>
+        <p>Source: <a href="https://earthobservatory.nasa.gov/Features/SeaIce/page3.php">Artic Sea Ice by earthobservatory.nasa.gov</a></p> 
     </body>
-</html>     
 
-
-
-
-<!-- 
-    d3.select("body").append("p").text("New paragraph!");
-    d3.select("body").style("color", "blue")
-    d3.select("body").append("p").text("Empty paragraph!");
-    d3.select("p").each(function(d, i) {
-    	d3.select("p").text("Other")
-    });
-    var body = d3.select("body");
-    var p = body.append("p");
-    p.text("Hi dude");
-    d3.select("body").style("background-color", "lightgrey");
- -->
+</html>

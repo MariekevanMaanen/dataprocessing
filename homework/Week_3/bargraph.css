@@ -1,11 +1,40 @@
+/**
+bargraph.css
+
+dataprocessing Week 3
+Marieke van Maanen
+10888640
+
+Style file for a bar graph about the extent of arctic ice sea from 2002-2015.
+**/
+
 body {
     text-align: center;
     font: 12px Arial;
     background-color: lightgrey;
 }
 
-h1 {
-	text-align: center;
-	font: 26px Arial;
-	font-weight: bold;
+.bar {
+	fill: darkblue;
+}
+
+.axis path,
+.axis line {
+	fill: none;
+	stroke: black;
+	shape-rendering: crispEdges;
+	
+}
+
+.d3-tip {
+  line-height: 1;
+  font-weight: bold;
+  padding: 12px;
+  background: #000;
+  color: #fff;
+  border-radius: 2px;
+}
+
+.bar:hover {
+fill: grey;
 }
