@@ -86,13 +86,11 @@ function DrawGraph(dataset) {
 	// define x and y-axis
     var xAxis = d3.svg.axis()
                   .scale(x)
-                  .orient("bottom")
-                  //.ticks(data_length);
+                  .orient("bottom");
 
     var yAxis = d3.svg.axis()
 	              .scale(y)
-	              .orient("left")
-	              //.ticks(18);
+	              .orient("left");
 
 
 	// generate x-axis
