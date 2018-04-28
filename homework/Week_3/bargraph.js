@@ -12,6 +12,9 @@ This file creates a bar graph about the extent of arctic ice sea from 2002-2015.
 d3.select("head").append("title")
 						.text("Arctic Sea Ice from 2002-2015");
 
+d3.select("body").append("h1")
+						.text("Arctic Sea Ice from 2002-2015");
+
 d3.select("body").append("h3")
 						.text("Marieke van Maanen (10888640)");					
 
@@ -80,7 +83,7 @@ function DrawGraph(dataset) {
 						.domain([0, d3.max(dataset.data, function(d) { return d.extent; })])
 						.range([height, 0]);
 
-	// create x and y-axis
+	// define x and y-axis
     var xAxis = d3.svg.axis()
                   .scale(x)
                   .orient("bottom")
@@ -117,7 +120,7 @@ function DrawGraph(dataset) {
 					    .text("Average Minimum Extent of Artic Sea Ice(millions of km2)")
             			.style("font-size", "13px")
             			.style("font-weight", "bold");
-
+    // create rectangles       			
 	var rects = svg.selectAll(".bar")
 				    .data(dataset.data)
 					.enter()
