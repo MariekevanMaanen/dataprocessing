@@ -118,6 +118,7 @@ function DrawGraph(dataset) {
 					    .text("Average Minimum Extent of Artic Sea Ice(millions of km2)")
             			.style("font-size", "13px")
             			.style("font-weight", "bold");
+            			
     // create rectangles       			
 	var rects = svg.selectAll(".bar")
 				    .data(dataset.data)

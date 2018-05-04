@@ -14,15 +14,41 @@ This file creates a bar graph about the extent of arctic ice sea from 2002-2015.
     <head>
         <meta charset="utf-8">
         <script src="https://d3js.org/d3.v4.min.js"></script>
-        <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+        <script src="d3-tip.js"></script>
         <link rel="stylesheet" type="text/css" href="scatter.css">
-            </head>
+
+    </head>
 
     <body>
-        <h1>Scatterplot</h1>
-
+        
         <script src="scatter.js"></script>
 
+        <h1>Scatterplot about PM2.5 exposure</h1>
+        <h3>Marieke van Maanen (10888640)</h3>
+        <p>This plot visualizes PM2.5 exposure against population density per country.</br>PM2.5 (Dutch: fijnstof) refers to atmospheric particulate matter (PM) that have a diameter of less than 2.5 micrometers.</br>Fine particles can come from various sources like motor vehicles which are more common in densenly populated areas.</br>The third variable represents % of renewable electricity used per country which contains less PM2.5 than other electricity sources.</p>
+
+        <!-- https://www.w3schools.com/css/css_dropdowns.asp -->
+        <div class="dropdown">
+            <button type="button" class="dropbtn"> Select Year </button>
+            <div class="dropdown-content">
+                <a class="year" value="2000" href="#"> 2000 </a>
+                <a class="year" value="2001" href="#"> 2001 </a>
+                <a class="year" value="2002" href="#"> 2002 </a>
+                <a class="year" value="2003" href="#"> 2003 </a>
+                <a class="year" value="2004" href="#"> 2004 </a>
+                <a class="year" value="2005" href="#"> 2005 </a>
+                <a class="year" value="2006" href="#"> 2006 </a>
+                <a class="year" value="2007" href="#"> 2007 </a>
+                <a class="year" value="2008" href="#"> 2008 </a>
+                <a class="year" value="2009" href="#"> 2009 </a>
+                <a class="year" value="2010" href="#"> 2010 </a>
+                <a class="year" value="2011" href="#"> 2011 </a>
+                <a class="year" value="2012" href="#"> 2012 </a>
+                <a class="year" value="2013" href="#"> 2013 </a>
+            </div>
+        </div>
+
+        <p>Source: <a href="https://www.oecd-ilibrary.org/environment/data/oecd-environment-statistics/green-growth-indicators_data-00665-en">OECD Environment Statstics - Green growth indicators</a></p> 
     </body>
 
 </html>
