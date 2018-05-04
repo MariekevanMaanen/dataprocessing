@@ -5,7 +5,7 @@ dataprocessing week 4
 Marieke van Maanen
 10888640
 
-This file creates a bar graph about the extent of arctic ice sea from 2002-2015.
+This file plots PM2.5 vs population density with renewable energy as third variable.
 **/
 
 window.onload = function() {
