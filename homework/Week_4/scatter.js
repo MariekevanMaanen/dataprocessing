@@ -247,18 +247,18 @@ function MakeScatter(dataset, countries) {
 
 		// rescale x-axis, y-axis and radii
 		var x = d3.scaleLinear()
-							.domain([0, d3.max(update_data, function(d) { return d[1]; })])
-							.range([padding, width - padding]);
+					.domain([0, d3.max(update_data, function(d) { return d[1]; })])
+					.range([padding, width - padding]);
 
 
 		var y = d3.scaleLinear()
-							.domain([0, d3.max(update_data, function(d) { return d[2]; })])
-							.range([height, 0]);
+					.domain([0, d3.max(update_data, function(d) { return d[2]; })])
+					.range([height, 0]);
 
 		// create scale for radii
 		var radii = d3.scaleLinear()
-							.domain([0, d3.max(update_data, function (d) { return d[0]; })])			
-							.range([min_dot_size, max_dot_size]);
+					.domain([0, d3.max(update_data, function (d) { return d[0]; })])			
+					.range([min_dot_size, max_dot_size]);
 
 
 	    // update circles
