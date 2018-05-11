@@ -71,7 +71,7 @@ console.log(total_slave_trades)
 			  .attr('class', 'd3-tip')
 			  .offset([-10, 0])
 			  .html(function(d) {
-			    return "<span style='color:white'>" + d + "</span><strong style='color:white'> Slave Trades </strong> ";
+			    return "<span style='color:red'>" + d + "</span><strong style='color:red'> Slave Trades </strong> ";
 			  });
 	
 	// call tooltip
@@ -176,7 +176,7 @@ function MakeBar (dataset) {
 			  .attr('class', 'd3-tip')
 			  .offset([-10, 0])
 			  .html(function(d) {
-			    return "<span style='color:white'>" + d + "</span><strong style='color:white'> Slave Trades </strong> ";
+			    return "<span style='color:red'>" + d + "</span><strong style='color:red'> Slave Trades </strong> ";
 			  });
 	
 	// call tooltip on svg
