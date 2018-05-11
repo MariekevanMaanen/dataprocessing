@@ -27,7 +27,7 @@ function GetData(error) {
 
 function LoadData(error, response) {
 	if (error) throw error;
-	console.log(response)
+	
 	var nr_years = 14;
 	var nr_countries = 20;
 	var nr_variables = 3;
@@ -35,7 +35,7 @@ function LoadData(error, response) {
 	
 	// select datasets
 	var json = JSON.parse(response[0].responseText);
-	console.log(json)
+	
 
 	// add variables per country per year
 	for(var year = 0; year < nr_years; year++) {
