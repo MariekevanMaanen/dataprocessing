@@ -88,16 +88,34 @@ console.log(max_slave_trades) // max is 94.633 but should be 3 million..
         .range(["#feedde", "#fdd0a2", "#fdae6b", "#fd8d3c", "#e6550d", "#a63603"]);
 
 
-	/*.forEach(function(d){ 
+/*	.forEach(function(d){ 
 	var low=Math.round(100*Math.random()), 
 		mid=Math.round(100*Math.random()), 
 		high=Math.round(100*Math.random());
 	sampleData[d]={low:d3.min([low,mid,high]), high:d3.max([low,mid,high]), 
 			avg:Math.round((low+mid+high)/3), color:d3.interpolate("#ffffcc", "#800026")(low/100)};
+
+	// devide data in different groups
+	var colorScale = function(d) {
+	if (d == 0) {
+		return "0"
+	}
+	else if (d >= 1 && d < 1000) {
+		return "1-1,000"
+	}
+	else if (d >= 1000 && d < 10000) {
+		return "1,000-10,000"
+	}
+	else if (d >= 10000 && d < 100000) {
+		return "10,000-100,000"
+	}
+	else if (d >= 100000 && d < 1000000) {
+		return "100,000-1 million"
+	}
+	else if (d < 100000) {
+		return "1 million +"
+	};
 */
-
-
-
     var map = new Datamap({
 			element: document.getElementById('container'),
 			scope: "world",
@@ -245,4 +263,4 @@ function MakeBar (dataset) {
        .attr("y", -20)
        .attr("x", width / 4)
        .text("Total Slave Exports Between 1400-1900 (in zimbabwe..)")
-}
+};
