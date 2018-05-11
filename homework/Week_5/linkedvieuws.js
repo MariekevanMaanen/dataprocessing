@@ -105,13 +105,13 @@ console.log(max_slave_trades) // max is 94.633 but should be 3 million..
 			// zoom in on Africa
 			setProjection: function(element) {
 				var projection = d3.geo.equirectangular()
-									    .center([23, 0])
-									    .rotate([4.4, 0])
-									    .scale(400)
-									    .translate([element.offsetWidth / 2, element.offsetHeight / 2]);
-									    
-									    var path = d3.geo.path()
-									    .projection(projection);
+								    .center([23, 0])
+								    .rotate([4.4, 0])
+								    .scale(400)
+								    .translate([element.offsetWidth / 2, element.offsetHeight / 2]);
+								    
+								    var path = d3.geo.path()
+								    .projection(projection);
 
 				return {path: path, projection: projection};
 			},
@@ -185,12 +185,12 @@ function MakeBar (dataset) {
 
 	// create scale for x and y-axis
 	var x = d3.scale.ordinal()
-						.domain(["Trans-Atlanctic", "Indian Ocean", "Trans-Saharan", "Red Sea"])
-						.rangeRoundBands([0, width]);
+					.domain(["Trans-Atlanctic", "Indian Ocean", "Trans-Saharan", "Red Sea"])
+					.rangeRoundBands([0, width]);
 
 	var y = d3.scale.linear()
-						.domain([0, d3.max(Object.values(zimbabwe), function(d) { return d; })])
-						.range([height, 0]); 
+					.domain([0, d3.max(Object.values(zimbabwe), function(d) { return d; })])
+					.range([height, 0]); 
 
 	// define x and y-axis
     var xAxis = d3.svg.axis()
