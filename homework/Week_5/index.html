@@ -12,50 +12,113 @@ Marieke van Maanen
 
     <head>
         <meta charset="utf-8">
-
-
-<!--         <script src="https://d3js.org/d3.v3.min.js"></script>
-        <script src="https://d3js.org/topojson.v3.min.js"></script>
-        <script src="https://d3js.org/d3-queue.v3.min.js"></script>
-        <script src="https://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
-        <script src="https://d3js.org/colorbrewer.v1.min.js"></script>
-        <link rel="stylesheet" type="text/css" href="linkedvieuws.css">
-        <script src="https://datamaps.github.io/scripts/0.4.4/datamaps.world.min.js"></script>
-        
-        <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.3/d3.min.js"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js"></script>
-        <script src="/datamaps.world.min.js"></script> -->
+   
         
 
-
-        <link rel="stylesheet" type="text/css" href="linkedvieuws.css">
-
-        <!-- loads d3 v3 -->
+        <!-- d3 v3 -->
         <script src="https://d3js.org/d3.v3.min.js"></script>
 
         <!-- d3 tooltip -->
         <script src="https://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
 
-        <!-- loads libraries for d3v3: queue, requests -->
+        <!-- libraries for d3v3: queue, requests -->
         <script src="https://d3js.org/d3-collection.v1.min.js"></script>
         <script src="https://d3js.org/d3-dispatch.v1.min.js"></script>
         <script src="https://d3js.org/d3-dsv.v1.min.js"></script>
         <script src="https://d3js.org/d3-request.v1.min.js"></script>
         <script src="https://d3js.org/d3-queue.v3.min.js"></script>
 
-        <!-- loads world map -->
+        <!-- world map -->
         <script src="//cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js"></script>
         <script src="datamaps.world.min.js"></script>
 
-        <div id="container" style="position: relative; width: 500px; height: 550px;"></div>
+        <!-- bootstrap -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+        <link rel="stylesheet" type="text/css" href="linkedvieuws.css">
+        <title>Total Slave Exports Between 1400-1900</title>
 
     </head>
 
     <body>
-        
-        <script src="linkedvieuws.js"></script>
 
+
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="designchoices.pdf">Design Choices</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://dash.harvard.edu/bitstream/handle/1/3710252/nunn_long-termeffects.pdf?sequence=2">Data Source</a>
+                    </li>
+                </ul>
+        </nav>
+    </header>
+
+        <div class="jumbotron text-center">
+            <h1>Slave Exports Between 1400-1900</h1>
+            <p>Marieke van Maanen (10888640)</p> 
+            
+            <!-- Used to open the Modal -->
+            <button class="btn" data-toggle="modal" data-target="#myModal">Story Telling</button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" role="dialog">
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Story Telling</h4>
+                        </div>
+                        
+                        <!-- Story Telling Text -->
+                        <div class="modal-body" id="test1">
+                            <p>
+                                Hier komt story telling
+                            </p>
+                            <p>
+                                Want dit is leuk
+                            </p>     
+                        </div>
+                        <div class="modal-footer">
+                        
+                        <!-- Button to close the Model -->
+                        <button type="button" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
+                            <span class="glyphicon glyphicon-remove"></span> Close
+                        </button>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+
+        
+        <div class="container">
+            <button type="button" class="btn btn-default">Total Slave Exports</button>
+        </div>
+
+            </br></br>
+
+            <script src="linkedvieuws.js"></script>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div id="container_map"></div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div id="container_bar"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </body>
 
 </html>

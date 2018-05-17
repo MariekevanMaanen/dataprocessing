@@ -1,0 +1,365 @@
+{"exports": {
+    "AGO" : {
+      "trans_atlantic": 3607020,
+      "indian_ocean": 0,
+      "trans_saharan": 0,
+      "red_sea": 0
+      },
+  
+    "NGA" : {
+      "trans_atlantic": 1406728,
+      "indian_ocean": 0,
+      "trans_saharan": 555796,
+      "red_sea": 59337 
+      },
+  
+    "GHA" : {
+      "trans_atlantic": 1614793,
+      "indian_ocean": 0,
+      "trans_saharan": 0,
+      "red_sea": 0 
+      },
+  
+    "ETH": {
+      "trans_atlantic": 0,
+      "indian_ocean": 200,
+      "trans_saharan": 813899,
+      "red_sea": 633357 
+      },
+  
+    "SDN" : { 
+      "trans_atlantic": 615,
+      "indian_ocean": 174,
+      "trans_saharan": 40861,
+      "red_sea": 454913 
+      },
+  
+    "MLI" : {
+      "trans_atlantic": 331748,
+      "indian_ocean": 0,
+      "trans_saharan": 509950,
+      "red_sea": 0 
+      },
+  
+    "COD" : {
+      "trans_atlantic": 759468,
+      "indian_ocean": 7047,
+      "trans_saharan": 0,
+      "red_sea": 0 
+      },
+  
+    "MOZ" : {
+      "trans_atlantic": 382378,
+      "indian_ocean": 243484,
+      "trans_saharan": 0,
+      "red_sea": 0 
+      },
+  
+    "TZA" : {
+      "trans_atlantic": 10834,
+      "indian_ocean": 523992,
+      "trans_saharan": 0,
+      "red_sea": 0 
+      },
+  
+    "TCD" : {
+      "trans_atlantic": 823,
+      "indian_ocean": 0,
+      "trans_saharan": 409368,
+      "red_sea": 118673 
+      },
+  
+    "BEN" : {
+      "trans_atlantic": 456583,
+      "indian_ocean": 0,
+      "trans_saharan": 0,
+      "red_sea": 0 
+      },
+    
+    "SEN" : {
+      "trans_atlantic": 278195,
+      "indian_ocean": 0,
+      "trans_saharan": 98731,
+      "red_sea": 0 
+      },
+  
+    "GIN" : {
+      "trans_atlantic": 350149,
+      "indian_ocean": 0,
+      "trans_saharan": 0,
+      "red_sea": 0 
+      },
+  
+    "TGO" : {
+      "trans_atlantic": 289634,
+      "indian_ocean": 0,
+      "trans_saharan": 0,
+      "red_sea": 0 
+      },
+  
+    "GNB" : {
+      "trans_atlantic": 180752,
+      "indian_ocean": 0,
+      "trans_saharan": 0,
+      "red_sea": 0 
+      },
+  
+    "BFA" : {
+      "trans_atlantic": 167201,
+      "indian_ocean": 0,
+      "trans_saharan": 0,
+      "red_sea": 0 
+      },
+  
+    "MRT" : {
+      "trans_atlantic": 417,
+      "indian_ocean": 0,
+      "trans_saharan": 164017,
+      "red_sea": 0 
+      },
+  
+    "MWI" : {
+      "trans_atlantic": 88061,
+      "indian_ocean": 37370,
+      "trans_saharan": 0,
+      "red_sea": 0 
+      },
+  
+    "MDG" : {
+      "trans_atlantic": 36349,
+      "indian_ocean": 88927,
+      "trans_saharan": 0,
+      "red_sea": 0 
+      },
+  
+    "COG" : {
+      "trans_atlantic": 94663,
+      "indian_ocean": 0,
+      "trans_saharan": 0,
+      "red_sea": 0 
+      },
+  
+    "KEN" : {
+      "trans_atlantic": 303,
+      "indian_ocean": 12306,
+      "trans_saharan": 60351,
+      "red_sea": 13490 
+      },
+  
+    "SLE" : {
+      "trans_atlantic": 69607,
+      "indian_ocean": 0,
+      "trans_saharan": 0,
+      "red_sea": 0 
+      },
+  
+    "CMR" : {
+      "trans_atlantic": 66719,
+      "indian_ocean": 0,
+      "trans_saharan": 0,
+      "red_sea": 0 
+      },
+  
+    "DZA" : {
+      "trans_atlantic": 0,
+      "indian_ocean": 0,
+      "trans_saharan": 61835,
+      "red_sea": 0 
+      },
+  
+    "CIV" : {
+      "trans_atlantic": 52646,
+      "indian_ocean": 0,
+      "trans_saharan": 0,
+      "red_sea": 0 
+      },
+  
+    "SOM" : {
+      "trans_atlantic": 0,
+      "indian_ocean": 229,
+      "trans_saharan": 26194,
+      "red_sea": 5855 
+      },
+  
+    "ZMB" : {
+      "trans_atlantic": 6552,
+      "indian_ocean": 21406,
+      "trans_saharan": 0,
+      "red_sea": 0 
+      },
+  
+    "GAB" : {
+      "trans_atlantic": 27403,
+      "indian_ocean": 0,
+      "trans_saharan": 0,
+      "red_sea": 0 
+      },
+  
+    "GMB" : {
+      "trans_atlantic": 16039,
+      "indian_ocean": 0,
+      "trans_saharan": 5693,
+      "red_sea": 0 
+      },
+  
+    "NER" : {
+      "trans_atlantic": 133,
+      "indian_ocean": 0,
+      "trans_saharan": 0,
+      "red_sea": 19779 
+      },
+  
+    "LBY" : {
+    "trans_atlantic": 0,
+    "indian_ocean": 0,
+    "trans_saharan": 8848,
+    "red_sea": 0 
+    },
+  
+    "LBR" : {
+      "trans_atlantic": 6790,
+      "indian_ocean": 0,
+      "trans_saharan": 0,
+      "red_sea": 0 
+      },
+  
+    "UGA" : {
+      "trans_atlantic": 900,
+      "indian_ocean": 3654,
+      "trans_saharan": 0,
+      "red_sea": 0 
+      },
+  
+    "ZAF" : {
+      "trans_atlantic": 1944,
+      "indian_ocean": 87,
+      "trans_saharan": 0,
+      "red_sea": 0 
+      },
+  
+    "CAF" : {
+      "trans_atlantic": 2010,
+      "indian_ocean": 0,
+      "trans_saharan": 0,
+      "red_sea": 0 
+      },
+  
+    "EGY" : {
+      "trans_atlantic": 0,
+      "indian_ocean": 0,
+      "trans_saharan": 1492,
+      "red_sea": 0 
+      },
+  
+    "ZWE" : {
+      "trans_atlantic": 554,
+      "indian_ocean": 536,
+      "trans_saharan": 0,
+      "red_sea": 0 
+      },
+  
+    "NAM" : {
+      "trans_atlantic": 191,
+      "indian_ocean": 0,
+      "trans_saharan": 0,
+      "red_sea": 0 
+      },
+  
+    "BDI" : {
+      "trans_atlantic": 0,
+      "indian_ocean": 87,
+      "trans_saharan": 0,
+      "red_sea": 0 
+      },
+  
+    "GNQ" : {
+      "trans_atlantic": 11,
+      "indian_ocean": 0,
+      "trans_saharan": 0,
+      "red_sea": 0 
+      },
+  
+    "DJI" : {
+      "trans_atlantic": 0,
+      "indian_ocean": 5,
+      "trans_saharan": 0,
+      "red_sea": 0 
+      },
+  
+    "BWA" : {
+      "trans_atlantic": 0,
+      "indian_ocean": 0,
+      "trans_saharan": 0,
+      "red_sea": 0 
+      },
+  
+    "CPV" : {
+      "trans_atlantic": 0,
+      "indian_ocean": 0,
+      "trans_saharan": 0,
+      "red_sea": 0 
+      },
+  
+    "COM" : {
+      "trans_atlantic": 0,
+      "indian_ocean": 0,
+      "trans_saharan": 0,
+      "red_sea": 0 
+      },
+  
+    "LOS" : {
+      "trans_atlantic": 0,
+      "indian_ocean": 0,
+      "trans_saharan": 0,
+      "red_sea": 0 
+      },
+  
+    "MUS" : {
+    "trans_atlantic": 0,
+    "indian_ocean": 0,
+    "trans_saharan": 0,
+    "red_sea": 0 
+    },
+  
+    "MAR" : {
+      "trans_atlantic": 0,
+      "indian_ocean": 0,
+      "trans_saharan": 0,
+      "red_sea": 0 
+      },
+  
+    "RWA" : {
+      "trans_atlantic": 0,
+      "indian_ocean": 0,
+      "trans_saharan": 0,
+      "red_sea": 0 
+      },
+  
+    "STP" : {
+      "trans_atlantic": 0,
+      "indian_ocean": 0,
+      "trans_saharan": 0,
+      "red_sea": 0 
+      },
+  
+    "SWZ" : {
+      "trans_atlantic": 0,
+      "indian_ocean": 0,
+      "trans_saharan": 0,
+      "red_sea": 0 
+      },
+  
+    "SYC" : {
+      "trans_atlantic": 0,
+      "indian_ocean": 0,
+      "trans_saharan": 0,
+      "red_sea": 0 
+      },
+  
+    "TUN" : {
+      "trans_atlantic": 0,
+      "indian_ocean": 0,
+      "trans_saharan": 0,
+      "red_sea": 0 }
+  }
+}

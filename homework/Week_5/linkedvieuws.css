@@ -24,3 +24,44 @@ body {
     font-family: sans-serif;
     font-size: 11px;
 }
+
+.modal-header, h4, .close {
+    background-color: #333;
+    color: #fff !important;
+    text-align: center;
+    font-size: 30px;
+}
+
+.modal-header {
+    padding: 40px 50px;
+}
+
+#container_map, #container_bar {
+    position: relative; 
+    width: 500px; 
+    height: 550px;
+}
+
+/* coloring rectangles in barchart */
+.bar {
+    fill: black;
+}
+
+.bar:hover {
+    fill: #8c2d04;
+}
+
+/* coloring */
+.d3-tip {
+  line-height: 1;
+  padding: 3px;
+  /*background: saddlebrown;*/
+  color: black;
+/*  border-radius: 10px;*/
+  text-align: center;
+  font-size: 12px;
+}
+
+.jumbotron {
+    background-color: tan;
+}

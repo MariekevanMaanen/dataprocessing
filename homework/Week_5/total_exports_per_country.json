@@ -1,0 +1,262 @@
+{"total_exports": { 
+    "AGO": {
+      "fillKey": "Highest",
+      "exports": 3607020
+  },
+  
+    "NGA": {
+      "fillKey": "Highest",
+      "exports": 2021859
+  },
+  
+    "GHA": {
+      "fillKey": "Highest",
+      "exports": 1614793
+  },
+  
+    "ETH": {
+      "fillKey": "Highest",
+      "exports": 1447455
+  },
+  
+    "SDN": {
+      "fillKey": "High",
+      "exports": 863962
+  },
+  
+    "MLI": {
+      "fillKey": "High",
+      "exports": 841697
+  },
+  
+    "COD": {
+      "fillKey": "High",
+      "exports": 766515
+  },
+  
+    "MOZ": {
+      "fillKey": "High",
+      "exports": 625862
+  },
+  
+    "TZA": {
+      "fillKey": "High",
+      "exports": 534826
+  },
+  
+    "TCD": {
+      "fillKey": "High",
+      "exports": 528862
+  },
+  
+    "BEN": {
+      "fillKey": "High",
+      "exports": 456583
+  },
+  
+    "SEN": {
+      "fillKey": "High",
+      "exports": 376926
+  },
+  
+    "GIN": {
+      "fillKey": "High",
+      "exports": 350149
+  },
+  
+    "TGO": {
+      "fillKey": "High",
+      "exports": 289634
+  },
+  
+    "GNB": {
+      "fillKey": "High",
+      "exports": 180752
+  },
+  
+    "BFA": {
+      "fillKey": "High",
+      "exports": 167201
+  },
+  
+    "MRT": {
+      "fillKey": "High",
+      "exports": 164434
+  },
+  
+    "MWI": {
+      "fillKey": "High",
+      "exports": 125431
+  },
+  
+    "MDG": {
+      "fillKey": "High",
+      "exports": 125275
+  },
+  
+    "COG": {
+      "fillKey": "Medium",
+      "exports": 94663
+  },
+  
+    "KEN": {
+      "fillKey": "Medium",
+      "exports":86448
+  },
+  
+    "SLE": {
+      "fillKey": "Medium",
+      "exports": 69607
+  },
+  
+    "CMR": {
+      "fillKey": "Medium",
+      "exports":"66719"
+  },
+  
+    "DZA": {
+      "fillKey": "Medium",
+      "exports": 61835
+  },
+  
+    "CIV": {
+      "fillKey": "Medium",
+      "exports": 52646
+  },
+  
+    "SOM": {
+      "fillKey": "Medium",
+      "exports": 32277
+  },
+  
+    "ZMB": {
+      "fillKey": "Medium",
+      "exports": 27958
+  },
+  
+    "GAB": {
+      "fillKey": "Medium",
+      "exports": 27403
+  },
+  
+    "GMB": {
+      "fillKey": "Medium",
+      "exports": 21731
+  },
+  
+    "NER": {
+      "fillKey": "Medium",
+      "exports": 19912
+  },
+  
+    "LBY": {
+      "fillKey": "Low",
+      "exports": 8848
+  },
+  
+    "LBR": {
+      "fillKey": "Low",
+      "exports": 6790
+  },
+  
+    "UGA": {
+      "fillKey": "Low",
+      "exports": 4554
+  },
+  
+    "ZAF": {
+      "fillKey": "Low",
+      "exports": 2031
+  },
+  
+    "CAF": {
+      "fillKey": "Low",
+      "exports": 2010
+  },
+  
+    "EGY": {
+      "fillKey": "Low",
+      "exports": 1492
+  },
+  
+    "ZWE": {
+      "fillKey": "Low",
+      "exports": 1089
+  },
+  
+    "NAM": {
+      "fillKey": "Lower",
+      "exports": 191
+  },
+  
+    "BDI": {
+      "fillKey": "Lower",
+      "exports": 87
+  },
+  
+    "GNQ": {
+      "fillKey": "Lower",
+      "exports": 11
+  },
+  
+    "DJI": {
+      "fillKey": "Lower",
+      "exports": 5
+  },
+  
+    "BWA": {
+      "fillKey": "Zero",
+      "exports": 0
+  },
+  
+    "CPV": {
+      "fillKey": "Zero",
+      "exports": 0
+  },
+  
+    "COM": {
+      "fillKey": "Zero",
+      "exports": 0
+  },
+  
+    "LSO": {
+      "fillKey": "Zero",
+      "exports": 0
+  },
+  
+    "MUS": {
+      "fillKey": "Zero",
+      "exports": 0
+  },
+  
+    "MAR": {
+      "fillKey": "Zero",
+      "exports": 0
+  },
+  
+    "RWA": {
+      "fillKey": "Zero",
+      "exports": 0
+  },
+  
+    "STP": {
+      "fillKey": "Zero",
+      "exports": 0
+  },
+  
+    "SWZ": {
+      "fillKey": "Zero",
+      "exports": 0
+  },
+  
+    "SYC": {
+      "fillKey": "Zero",
+      "exports": 0
+  },
+  
+    "TUN": {
+      "fillKey": "Zero",
+      "exports": 0
+  }
+  }
+}
