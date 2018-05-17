@@ -25,8 +25,13 @@ body {
     font-size: 11px;
 }
 
+.nav-link {
+    font-size: 16px;
+    color: #00555d;
+}
+
 .modal-header, h4, .close {
-    background-color: #333;
+    background-color: #00555d;
     color: #fff !important;
     text-align: center;
     font-size: 30px;
@@ -44,24 +49,44 @@ body {
 
 /* coloring rectangles in barchart */
 .bar {
-    fill: black;
+    fill: #bfc4c7;
 }
 
 .bar:hover {
-    fill: #8c2d04;
+    fill: #d94801;
 }
 
 /* coloring */
 .d3-tip {
   line-height: 1;
   padding: 3px;
-  /*background: saddlebrown;*/
   color: black;
-/*  border-radius: 10px;*/
   text-align: center;
   font-size: 12px;
 }
 
 .jumbotron {
-    background-color: tan;
+    background-color: #00555d;
+    color: whitesmoke;
 }
+
+#slave-exp {
+    background-color: #bfc4c7;
+    color: white;
+}
+
+#storyText {
+    color: black;
+    font-size: 12px;
+}
+
+.btn-default {
+    background-color: #d94801;
+    color: white;
+    border-color: #d94801;
+}
+
+#slave-exp {
+    background-color: #bfc4c7;
+    color: white;
+    border-color: #bfc4c7;

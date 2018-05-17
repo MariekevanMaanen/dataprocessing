@@ -1,7 +1,7 @@
 /**
 linkedvieuws.js
 
-dataprocessing week 5
+dataprocessing week 5 & 6
 Marieke van Maanen
 10888640
 
@@ -12,15 +12,8 @@ window.onload = function() {
 /**
 	Op deze manier comments
 **/
-	d3.select("head").append("title")
-						.text("Total Slave Exports between 1400-1900");
 
-		getData();
-		//makeLegend();
-		//promeces for js of iets doen om  asynchroniteit te krijgen
-		// aan Kim vragen hoe ik dit moet doen
-		//makeMap();
-
+	getData();
 };
 
 function getData(error) {
@@ -43,7 +36,6 @@ function getData(error) {
 function makeMap(response) {
 
 	var exports_per_country = response[1]["total_exports"];
-	console.log(response)
 
     var map = new Datamap({
 			element: document.getElementById('container_map'),
@@ -53,9 +45,19 @@ function makeMap(response) {
 			done: function(datamap) {
 	            datamap.svg.selectAll('.datamaps-subunit').on('click', function(geography) {
 	                var location = geography.id;
-	                d3.selectAll("#plotTitle")
+	                
+	                if ((exports_per_country[location]) == null) {
+                    	console.log("No Data Available for this Country")
+                	}
+                	
+                	else {
+	                	d3.selectAll("#plotTitle")
 	                					.text("Slave Exports in " + geography.properties.name + " (1400-1900)")
-	                update(location, response);
+	                	
+
+
+	                	update(location, response);
+	            	};
 	            });
         	},
 
@@ -74,12 +76,12 @@ function makeMap(response) {
 			},
 
 			fills: {
-				Zero: "#fdd0a2", 
-				Lower: "#fdae6b",
-				Low: "#fd8d3c",
-				Medium: "#f16913",
-				High: "#d94801",
-				Highest: "#8c2d04",
+				"0": "#fdd0a2", 
+				"1-1,000": "#fdae6b",
+				"1,000-10,000": "#fd8d3c",
+				"10,000-100,000": "#f16913",
+				"100,000-1 million": "#d94801",
+				"1 million <": "#8c2d04",
 				defaultFill: "whitesmoke"
 			},
 
@@ -87,7 +89,7 @@ function makeMap(response) {
 				borderColor: "lightgrey",
 				popupOnHover: true,
 				highlightOnHover: true,
-				highlightFillColor: "darkslategrey",
+				highlightFillColor: "#00555D",
 				highlightBorderColor: "black",
 				popupTemplate: function(geo, data) {
 	                if (!data) {
@@ -104,6 +106,12 @@ function makeMap(response) {
 	            }
 		}
 	});
+
+	// add legend to worldmap
+    var legend = {
+        legendTitle: "Number of Exports"
+    }
+    map.legend(legend)
 };
 
 
@@ -111,12 +119,13 @@ function makeBar (dataset) {
 
 	var total_exports = Object.values(dataset["2"]["0"]);
 
+
 	
 	// set dimensions for bargraph
 	var margin = {top: 70, right: 30, bottom: 60, left: 100},
     	width = 560 - margin.left - margin.right,
     	height = 500 - margin.top - margin.bottom,
-		barPadding = 5,
+		barPadding = 10,
 		padding = 25;
 
 	// get svg element
@@ -142,10 +151,6 @@ function makeBar (dataset) {
 	var x = d3.scale.ordinal()
 					.domain(["Trans-Atlanctic", "Indian Ocean", "Trans-Saharan", "Red Sea"])
 					.rangeRoundBands([0, width]);
-
-/*	var y = d3.scale.log()
-					.domain([1, d3.max(total_exports, function(d) { return d; })])
-					.range([height, 0]); */
 
 	var y = d3.scale.linear()
 					.domain([0, d3.max(total_exports, function(d) { return d; })])
@@ -208,12 +213,7 @@ function makeBar (dataset) {
        .text("Total Slave Exports between 1400-1900")
        .style("font-size", "17px")
        .style("text-anchor", "middle");
-
-	//var color = d3.scale.ordinal(["#feedde", "#fdd0a2", "#fdae6b", "#fd8d3c", "#e6550d", "#a63603"])
 };
-
-
-
 
 
 
@@ -226,7 +226,7 @@ function update(location, dataset) {
 	var margin = {top: 70, right: 30, bottom: 60, left: 100},
     	width = 560 - margin.left - margin.right,
     	height = 500 - margin.top - margin.bottom,
-		barPadding = 5,
+		barPadding = 10,
 		padding = 25;
 
 	var slave_exports = dataset["0"]["exports"];
@@ -251,10 +251,6 @@ function update(location, dataset) {
 	var x = d3.scale.ordinal()
 					.domain(["Trans-Atlanctic", "Indian Ocean", "Trans-Saharan", "Red Sea"])
 					.rangeRoundBands([margin.left, width]);
-
-/*	var y = d3.scale.log()
-					.domain([1, d3.max(current_country, function(d) { return d; })])
-					.range([height, 0]); */
 
 	var y = d3.scale.linear()
 					.domain([0, d3.max(current_country, function(d) { return d; })])
@@ -281,10 +277,11 @@ function update(location, dataset) {
         			.style("font-size", "13px")
         			.style("font-weight", "bold");
 
-     // create rectangles       			
-	var rects = svg.selectAll(".bar")
+     // remove rectangles       			
+	var rects_remove = svg.selectAll(".bar")
 					.remove();
 
+	// create new rectangles
 	var rects = svg.selectAll(".bar").data(current_country)
 					.enter()
 					.append("rect")
@@ -298,5 +295,7 @@ function update(location, dataset) {
 
 };
 
-
+function reloadPage(data) {
+    location.reload();
+}
 

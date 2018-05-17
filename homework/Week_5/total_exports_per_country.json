@@ -1,261 +1,261 @@
 {"total_exports": { 
     "AGO": {
-      "fillKey": "Highest",
+      "fillKey": "1 million <",
       "exports": 3607020
   },
   
     "NGA": {
-      "fillKey": "Highest",
+      "fillKey": "1 million <",
       "exports": 2021859
   },
   
     "GHA": {
-      "fillKey": "Highest",
+      "fillKey": "1 million <",
       "exports": 1614793
   },
   
     "ETH": {
-      "fillKey": "Highest",
+      "fillKey": "1 million <",
       "exports": 1447455
   },
   
     "SDN": {
-      "fillKey": "High",
+      "fillKey": "100,000-1 million",
       "exports": 863962
   },
   
     "MLI": {
-      "fillKey": "High",
+      "fillKey": "100,000-1 million",
       "exports": 841697
   },
   
     "COD": {
-      "fillKey": "High",
+      "fillKey": "100,000-1 million",
       "exports": 766515
   },
   
     "MOZ": {
-      "fillKey": "High",
+      "fillKey": "100,000-1 million",
       "exports": 625862
   },
   
     "TZA": {
-      "fillKey": "High",
+      "fillKey": "100,000-1 million",
       "exports": 534826
   },
   
     "TCD": {
-      "fillKey": "High",
+      "fillKey": "100,000-1 million",
       "exports": 528862
   },
   
     "BEN": {
-      "fillKey": "High",
+      "fillKey": "100,000-1 million",
       "exports": 456583
   },
   
     "SEN": {
-      "fillKey": "High",
+      "fillKey": "100,000-1 million",
       "exports": 376926
   },
   
     "GIN": {
-      "fillKey": "High",
+      "fillKey": "100,000-1 million",
       "exports": 350149
   },
   
     "TGO": {
-      "fillKey": "High",
+      "fillKey": "100,000-1 million",
       "exports": 289634
   },
   
     "GNB": {
-      "fillKey": "High",
+      "fillKey": "100,000-1 million",
       "exports": 180752
   },
   
     "BFA": {
-      "fillKey": "High",
+      "fillKey": "100,000-1 million",
       "exports": 167201
   },
   
     "MRT": {
-      "fillKey": "High",
+      "fillKey": "100,000-1 million",
       "exports": 164434
   },
   
     "MWI": {
-      "fillKey": "High",
+      "fillKey": "100,000-1 million",
       "exports": 125431
   },
   
     "MDG": {
-      "fillKey": "High",
+      "fillKey": "100,000-1 million",
       "exports": 125275
   },
   
     "COG": {
-      "fillKey": "Medium",
+      "fillKey": "10,000-100,000",
       "exports": 94663
   },
   
     "KEN": {
-      "fillKey": "Medium",
+      "fillKey": "10,000-100,000",
       "exports":86448
   },
   
     "SLE": {
-      "fillKey": "Medium",
+      "fillKey": "10,000-100,000",
       "exports": 69607
   },
   
     "CMR": {
-      "fillKey": "Medium",
+      "fillKey": "10,000-100,000",
       "exports":"66719"
   },
   
     "DZA": {
-      "fillKey": "Medium",
+      "fillKey": "10,000-100,000",
       "exports": 61835
   },
   
     "CIV": {
-      "fillKey": "Medium",
+      "fillKey": "10,000-100,000",
       "exports": 52646
   },
   
     "SOM": {
-      "fillKey": "Medium",
+      "fillKey": "10,000-100,000",
       "exports": 32277
   },
   
     "ZMB": {
-      "fillKey": "Medium",
+      "fillKey": "10,000-100,000",
       "exports": 27958
   },
   
     "GAB": {
-      "fillKey": "Medium",
+      "fillKey": "10,000-100,000",
       "exports": 27403
   },
   
     "GMB": {
-      "fillKey": "Medium",
+      "fillKey": "10,000-100,000",
       "exports": 21731
   },
   
     "NER": {
-      "fillKey": "Medium",
+      "fillKey": "10,000-100,000",
       "exports": 19912
   },
   
     "LBY": {
-      "fillKey": "Low",
+      "fillKey": "1,000-10,000",
       "exports": 8848
   },
   
     "LBR": {
-      "fillKey": "Low",
+      "fillKey": "1,000-10,000",
       "exports": 6790
   },
   
     "UGA": {
-      "fillKey": "Low",
+      "fillKey": "1,000-10,000",
       "exports": 4554
   },
   
     "ZAF": {
-      "fillKey": "Low",
+      "fillKey": "1,000-10,000",
       "exports": 2031
   },
   
     "CAF": {
-      "fillKey": "Low",
+      "fillKey": "1,000-10,000",
       "exports": 2010
   },
   
     "EGY": {
-      "fillKey": "Low",
+      "fillKey": "1,000-10,000",
       "exports": 1492
   },
   
     "ZWE": {
-      "fillKey": "Low",
+      "fillKey": "1,000-10,000",
       "exports": 1089
   },
   
     "NAM": {
-      "fillKey": "Lower",
+      "fillKey": "1-1,000",
       "exports": 191
   },
   
     "BDI": {
-      "fillKey": "Lower",
+      "fillKey": "1-1,000",
       "exports": 87
   },
   
     "GNQ": {
-      "fillKey": "Lower",
+      "fillKey": "1-1,000",
       "exports": 11
   },
   
     "DJI": {
-      "fillKey": "Lower",
+      "fillKey": "1-1,000",
       "exports": 5
   },
   
     "BWA": {
-      "fillKey": "Zero",
+      "fillKey": "0",
       "exports": 0
   },
   
     "CPV": {
-      "fillKey": "Zero",
+      "fillKey": "0",
       "exports": 0
   },
   
     "COM": {
-      "fillKey": "Zero",
+      "fillKey": "0",
       "exports": 0
   },
   
     "LSO": {
-      "fillKey": "Zero",
+      "fillKey": "0",
       "exports": 0
   },
   
     "MUS": {
-      "fillKey": "Zero",
+      "fillKey": "0",
       "exports": 0
   },
   
     "MAR": {
-      "fillKey": "Zero",
+      "fillKey": "0",
       "exports": 0
   },
   
     "RWA": {
-      "fillKey": "Zero",
+      "fillKey": "0",
       "exports": 0
   },
   
     "STP": {
-      "fillKey": "Zero",
+      "fillKey": "0",
       "exports": 0
   },
   
     "SWZ": {
-      "fillKey": "Zero",
+      "fillKey": "0",
       "exports": 0
   },
   
     "SYC": {
-      "fillKey": "Zero",
+      "fillKey": "0",
       "exports": 0
   },
   
     "TUN": {
-      "fillKey": "Zero",
+      "fillKey": "0",
       "exports": 0
   }
   }
