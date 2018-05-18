@@ -38,7 +38,7 @@ function makeMap(response) {
 	var exports_per_country = response[1]["total_exports"];
 
 	// draws map according data
-    	var map = new Datamap({
+    var map = new Datamap({
 			element: document.getElementById('container_map'),
 			scope: "world",
 			data: exports_per_country,
@@ -143,9 +143,9 @@ function makeBar (dataset) {
 				.attr("width", width + margin.left + margin.right)
 				.attr("height", height + margin.top + margin.bottom)
 				.append("g")
-    				.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+    			.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-    	// define d3 tooltip			
+    // define d3 tooltip			
 	var tip = d3.tip()
 			  .attr('class', 'd3-tip')
 			  .offset([-5, 0])
@@ -158,62 +158,62 @@ function makeBar (dataset) {
 
 	// create scale for x and y-axis
 	var x = d3.scale.ordinal()
-			.domain(["Trans-Atlanctic", "Indian Ocean", "Trans-Saharan", "Red Sea"])
-			.rangeRoundBands([0, width]);
+					.domain(["Trans-Atlanctic", "Indian Ocean", "Trans-Saharan", "Red Sea"])
+					.rangeRoundBands([0, width]);
 
 	var y = d3.scale.linear()
-			.domain([0, d3.max(total_exports, function(d) { return d; })])
-			.range([height, 0]); 
+					.domain([0, d3.max(total_exports, function(d) { return d; })])
+					.range([height, 0]); 
 
 
 	// define x and y-axis
     var xAxis = d3.svg.axis()
-                .scale(x)
-                .orient("bottom");
+                  .scale(x)
+                  .orient("bottom");
 
     var yAxis = d3.svg.axis()
-	           .scale(y)
-	           .orient("left");
+	            .scale(y)
+	            .orient("left");
 
 	// generate x and y-axis
 	var draw_x = svg.append("g")
-			    .attr("class", "axis")
-			    .attr("transform", "translate(0," + height + ")")
-			    .call(xAxis)
-			.append("text")
-			.attr("y", margin.bottom)
-			.attr("x", height)
-			.attr("dx", "15em")
-			.style("font-size", "13px")
-			.style("font-weight", "bold");
+					    .attr("class", "axis")
+					    .attr("transform", "translate(0," + height + ")")
+					    .call(xAxis)
+					.append("text")
+						.attr("y", margin.bottom)
+						.attr("x", height)
+						.attr("dx", "15em")
+						.style("font-size", "13px")
+						.style("font-weight", "bold");
 
 
 	var draw_y = svg.append("g")
-			    .attr("class", "axis")
-			    .attr("id", "y_axis")
-			    .call(yAxis)
-			.append("text")
-			.attr("transform", "rotate(-90)")
-			    .attr("y", - 80)
-			    .attr("dy", ".8em")
-			    .style("text-anchor", "end")
-			    .text("Number of Slave Exports")
-    					.style("font-size", "13px")
-    					.style("font-weight", "bold");
+					    .attr("class", "axis")
+					    .attr("id", "y_axis")
+					    .call(yAxis)
+					.append("text")
+						.attr("transform", "rotate(-90)")
+					    .attr("y", - 80)
+					    .attr("dy", ".8em")
+					    .style("text-anchor", "end")
+					    .text("Number of Slave Exports")
+            			.style("font-size", "13px")
+            			.style("font-weight", "bold");
 
    // create rectangles       			
 	var rects = svg.selectAll(".bar")
-			    .data(total_exports)
-			.enter()
-			.append("rect")
-			.attr("class", "bar")
-			.attr("x", function(d, i) { return i * (width / 4) + barPadding; })
-			    .attr("width", width / 4 - barPadding )
-			    .attr("y", function(d) { return y(d); })
-			    .attr("height", function(d) { return height - y(d); })
-			.on("mouseover", tip.show)
-			.on("mouseout", tip.hide);
-
+				    .data(total_exports)
+					.enter()
+					.append("rect")
+					.attr("class", "bar")
+					.attr("x", function(d, i) { return i * (width / 4) + barPadding; })
+				    .attr("width", width / 4 - barPadding )
+				    .attr("y", function(d) { return y(d); })
+				    .attr("height", function(d) { return height - y(d); })
+				 	.on("mouseover", tip.show)
+					.on("mouseout", tip.hide);
+    
 	// add plot title				
     svg.append("text")
        .attr("id", "plotTitle")
@@ -241,13 +241,13 @@ function update(location, dataset) {
 	// select required data	
 	var slave_exports = dataset["0"]["exports"];
 
-    	// define d3 tooltip			
+    // define d3 tooltip			
 	var tip = d3.tip()
-			.attr('class', 'd3-tip')
-			.offset([-5, 0])
-			.html(function(d) {
-				return "<strong>" + d + "</strong> Exports";
-			});
+			  .attr('class', 'd3-tip')
+			  .offset([-5, 0])
+			  .html(function(d) {
+			    return "<strong>" + d + "</strong> Exports";
+			  });
 	
 	// select corresponding svg
 	var svg = d3.select("#container_bar")
@@ -269,41 +269,41 @@ function update(location, dataset) {
 					.range([height, 0]); 
 
 	// scale y-axis				
-    	var yAxis = d3.svg.axis()
+    var yAxis = d3.svg.axis()
 	              .scale(y)
 	              .orient("left");
 
 	// remove current y-axis
 	var remove_y = svg.selectAll("#y_axis")
-					.remove();
+						.remove();
 
 	// draw new y-axis					
 	var draw_y = svg.append("g")
-			    .attr("class", "axis")
-			    .attr("id", "y_axis")
-			    .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
-			    .call(yAxis)
-			.append("text")
-			.attr("transform", "rotate(-90)")
-			    .attr("y", - 80)
-			    .attr("dy", ".8em")
-			    .style("text-anchor", "end")
-			    .text("Number of Slave Exports")
-    				.style("font-size", "13px")
-    				.style("font-weight", "bold");
+				    .attr("class", "axis")
+				    .attr("id", "y_axis")
+				    .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+				    .call(yAxis)
+				.append("text")
+					.attr("transform", "rotate(-90)")
+				    .attr("y", - 80)
+				    .attr("dy", ".8em")
+				    .style("text-anchor", "end")
+				    .text("Number of Slave Exports")
+        			.style("font-size", "13px")
+        			.style("font-weight", "bold");
 
     // remove current rectangles       			
 	var rects_remove = svg.selectAll(".bar")
-				.remove();
+					.remove();
 
 	// create new rectangles
 	var rects = svg.selectAll(".bar").data(current_country)
 					.enter()
 					.append("rect")
 					.attr("class", "bar")
-						.attr("x", function(d, i) { return i * (width / 4) + margin.left + barPadding; })
-				    	.attr("width", width / 4 - barPadding )
-				    	.attr("y", function(d) { return y(d) + margin.top; })
+					.attr("x", function(d, i) { return i * (width / 4) + margin.left + barPadding; })
+				    .attr("width", width / 4 - barPadding )
+				    .attr("y", function(d) { return y(d) + margin.top; })
 				    .attr("height", function(d) { return height - y(d); })
 				 	.on("mouseover", tip.show)
 					.on("mouseout", tip.hide);
