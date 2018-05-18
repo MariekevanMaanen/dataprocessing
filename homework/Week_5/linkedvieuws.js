@@ -5,20 +5,17 @@ dataprocessing week 5 & 6
 Marieke van Maanen
 10888640
 
-Creates a map of Africa 
+This file supports index.html.
+It shows a linked view with a map of Africa and a corresponding barchart
+about slave exports in Africa between 1400-1900.
 **/
 
 window.onload = function() {
 /**
-	Op deze manier comments
+	Loads data files into this file and parses them to makeMap and makeBar function.
 **/
-
-	getData();
-};
-
-function getData(error) {
-	if (error) throw error;
 	
+	// loads all data files before parsing to functions
 	d3.queue()
   	.defer(d3.json, "exports_per_country.json")
   	.defer(d3.json, "total_exports_per_country.json")
@@ -29,23 +26,30 @@ function getData(error) {
   		makeMap(response);
   		makeBar(response);
   	});	
-
 };
 
 
 function makeMap(response) {
-
+/**
+	Loads a world map zoomed in on Africa
+**/
+	
+	// select required data
 	var exports_per_country = response[1]["total_exports"];
 
+	// draws map according data
     var map = new Datamap({
 			element: document.getElementById('container_map'),
 			scope: "world",
 			data: exports_per_country,
 			
 			done: function(datamap) {
+	            
+				// parse country data to update function if data is available 
 	            datamap.svg.selectAll('.datamaps-subunit').on('click', function(geography) {
 	                var location = geography.id;
 	                
+	                // update bar graph title
 	                if ((exports_per_country[location]) == null) {
                     	console.log("No Data Available for this Country")
                 	}
@@ -54,8 +58,6 @@ function makeMap(response) {
 	                	d3.selectAll("#plotTitle")
 	                					.text("Slave Exports in " + geography.properties.name + " (1400-1900)")
 	                	
-
-
 	                	update(location, response);
 	            	};
 	            });
@@ -75,6 +77,7 @@ function makeMap(response) {
 				return {path: path, projection: projection};
 			},
 
+			// colours country according to number of slave exports
 			fills: {
 				"0": "#fdd0a2", 
 				"1-1,000": "#fdae6b",
@@ -85,12 +88,15 @@ function makeMap(response) {
 				defaultFill: "whitesmoke"
 			},
 
+			// geography configuration
 			geographyConfig: {
 				borderColor: "lightgrey",
 				popupOnHover: true,
 				highlightOnHover: true,
 				highlightFillColor: "#00555D",
 				highlightBorderColor: "black",
+				
+				// shows tooltip when hovering over country
 				popupTemplate: function(geo, data) {
 	                if (!data) {
 	                	return ['<div class="hoverinfo"><strong>',
@@ -107,7 +113,7 @@ function makeMap(response) {
 		}
 	});
 
-	// add legend to worldmap
+	// add legend to map
     var legend = {
         legendTitle: "Number of Exports"
     }
@@ -116,11 +122,14 @@ function makeMap(response) {
 
 
 function makeBar (dataset) {
-
+/**
+	Draws bar graph of total slave exports in Africa.
+**/
+	
+	// select required data
 	var total_exports = Object.values(dataset["2"]["0"]);
 
 
-	
 	// set dimensions for bargraph
 	var margin = {top: 70, right: 30, bottom: 60, left: 100},
     	width = 560 - margin.left - margin.right,
@@ -166,7 +175,7 @@ function makeBar (dataset) {
 	              .scale(y)
 	              .orient("left");
 
-	// generate x-axis
+	// generate x and y-axis
 	var draw_x = svg.append("g")
 					    .attr("class", "axis")
 					    .attr("transform", "translate(0," + height + ")")
@@ -219,7 +228,7 @@ function makeBar (dataset) {
 
 function update(location, dataset) {
 /**
-	Update data section.
+	Update data section when clicked on country.
 **/
 
 	// set dimensions for bargraph
@@ -229,6 +238,7 @@ function update(location, dataset) {
 		barPadding = 10,
 		padding = 25;
 
+	// select required data	
 	var slave_exports = dataset["0"]["exports"];
 
     // define d3 tooltip			
@@ -239,12 +249,14 @@ function update(location, dataset) {
 			    return "<strong>" + d + "</strong> Exports";
 			  });
 	
+	// select corresponding svg
 	var svg = d3.select("#container_bar")
 				.select("svg");
 
 	// call tooltip on svg
 	svg.call(tip);
 
+	// get ISO code from selected country
 	var current_country = Object.values(slave_exports[location]);
 
 	// create scale for x and y-axis
@@ -256,13 +268,16 @@ function update(location, dataset) {
 					.domain([0, d3.max(current_country, function(d) { return d; })])
 					.range([height, 0]); 
 
+	// scale y-axis				
     var yAxis = d3.svg.axis()
 	              .scale(y)
 	              .orient("left");
 
+	// remove current y-axis
 	var remove_y = svg.selectAll("#y_axis")
 						.remove();
 
+	// draw new y-axis					
 	var draw_y = svg.append("g")
 				    .attr("class", "axis")
 				    .attr("id", "y_axis")
@@ -277,7 +292,7 @@ function update(location, dataset) {
         			.style("font-size", "13px")
         			.style("font-weight", "bold");
 
-     // remove rectangles       			
+    // remove current rectangles       			
 	var rects_remove = svg.selectAll(".bar")
 					.remove();
 
@@ -296,6 +311,10 @@ function update(location, dataset) {
 };
 
 function reloadPage(data) {
+/**
+	Reloads page to show overall data of slave exports.
+**/
+
     location.reload();
 }
 

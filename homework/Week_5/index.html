@@ -1,7 +1,7 @@
 <!-- 
 index.html
 
-dataprocessing week 5
+dataprocessing week 5 & 6
 Marieke van Maanen
 10888640
 
@@ -45,46 +45,56 @@ Marieke van Maanen
 
     <body>
 
+        <!-- create button for design choices and data source -->
+        <header>
+            <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="designchoices.pdf">Design Choices</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://dash.harvard.edu/bitstream/handle/1/3710252/nunn_long-termeffects.pdf?sequence=2">Data Source</a>
+                        </li>
+                    </ul>
+            </nav>
+        </header>
 
-    <header>
-        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-                <ul class="nav navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="designchoices.pdf">Design Choices</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://dash.harvard.edu/bitstream/handle/1/3710252/nunn_long-termeffects.pdf?sequence=2">Data Source</a>
-                    </li>
-                </ul>
-        </nav>
-    </header>
-
+        <!-- format for title, name and story telling button -->
         <div class="jumbotron text-center">
             <h1>Slave Exports Between 1400-1900</h1>
             <p>Marieke van Maanen (10888640)</p> 
             
-            <!-- Used to open the Modal -->
+            <!-- used to open the modal -->
             <button class="btn btn-default" data-toggle="modal" data-target="#myModal">Story Telling</button>
 
-            <!-- Modal -->
+            <!-- modal -->
             <div class="modal fade" id="myModal" role="dialog">
                 <div class="modal-dialog">
 
-                    <!-- Modal content-->
+                    <!-- modal content-->
                     <div class="modal-content">
                         <div class="modal-header" id="story">
                             <button type="button" class="close btn-info" data-dismiss="modal">&times;</button>
                             <h4 class="modal-title">Story Telling</h4>
                         </div>
                         
-                        <!-- Story Telling Text -->
-                        <div class="modal-body" id="storyText">
-                            <p id="test1">
-                                Hier komt story telling
+                        <!-- story telling text -->
+                        <div class="modal-body">
+                            <p>
+                                Discussing the legacy of slavery in Africa is still a complex and difficult conversation to have. How do we confront this horrible and defining period of our history and why is it still a relevant topic these days?
                             </p>
                             <p>
-                                Want dit is leuk
+                                The history of slavery is enormous and can be traced back as far as 3500 BC. Although slavery is no longer legal anywhere in the world (except penal labour), there is still an estimated 25-40 million people that are enslaved today. 
+                            </p>
+                            <p>
+                                In Europe, slavery became common during the Dark Ages and continued into the Middle ages. The Dutch, French, Spanish, Portuguese, British but also Arabs and a number of West African kingdoms played a prominent role in the Atlantic Slave Trade, especially after 1600. Besides the Atlantic Slave Trades, the African continent was bled of its human resources via all possible routes. Across the Sahara, through the Red Sea, from the Indian Ocean ports and mainly so across the Atlantic. 
+                            </p>   
+                            <p>
+                                The Slave Market was a huge profitable economy resulting in the fact that up to half of the original population of African countries was held against their will in either some form of slavery or serfdom. 
                             </p>     
+                            <p>
+                                Therefore, this page shows the map of Africa and its slave exports between 1400 and 1900 reaching for awareness about this topic. 
+                            </p>       
                         </div>
                         <div class="modal-footer">
                         
@@ -98,27 +108,28 @@ Marieke van Maanen
             </div>
         </div> 
 
-        
+        <!-- button to relead page -->
         <div class="container">
             <button type="button" class="btn btn-default" id="slave-exp" onclick="reloadPage()">Total Slave Exports</button>
         </div>
 
-            </br></br>
+        <br>
+        <br>
 
-            <script src="linkedvieuws.js"></script>
+        <script src="linkedvieuws.js"></script>
 
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-6">
-                        <div id="container_map"></div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div id="container_bar"></div>
-                    </div>
+        <!-- devide page in two columns -->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div id="container_map"></div>
+                </div>
+                <div class="col-sm-6">
+                    <div id="container_bar"></div>
                 </div>
             </div>
-
         </div>
-    </body>
+</body>
+
 
 </html>

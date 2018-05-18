@@ -5,7 +5,7 @@ dataprocessing Week 3
 Marieke van Maanen
 10888640
 
-Style file for a bar graph about the extent of arctic ice sea from 2002-2015.
+Style file for linked visualization about slave exports in Africa (1400-1900).
 **/
 
 body {
@@ -47,7 +47,6 @@ body {
     height: 550px;
 }
 
-/* coloring rectangles in barchart */
 .bar {
     fill: #bfc4c7;
 }
@@ -56,13 +55,16 @@ body {
     fill: #d94801;
 }
 
-/* coloring */
 .d3-tip {
   line-height: 1;
   padding: 3px;
   color: black;
   text-align: center;
   font-size: 12px;
+}
+
+.modal-body {
+    color: black;
 }
 
 .jumbotron {
@@ -73,11 +75,7 @@ body {
 #slave-exp {
     background-color: #bfc4c7;
     color: white;
-}
-
-#storyText {
-    color: black;
-    font-size: 12px;
+    border-color: #bfc4c7;
 }
 
 .btn-default {
@@ -86,7 +84,3 @@ body {
     border-color: #d94801;
 }
 
-#slave-exp {
-    background-color: #bfc4c7;
-    color: white;
-    border-color: #bfc4c7;
