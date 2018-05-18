@@ -147,11 +147,11 @@ function makeBar (dataset) {
 
     // define d3 tooltip			
 	var tip = d3.tip()
-			  .attr('class', 'd3-tip')
-			  .offset([-5, 0])
-			  .html(function(d) {
-			    return "<strong>" + d + "</strong> Exports";
-			  });
+			.attr('class', 'd3-tip')
+			.offset([-5, 0])
+			.html(function(d) {
+				return "<strong>" + d + "</strong> Exports";
+			});
 	
 	// call tooltip on svg
 	svg.call(tip);
