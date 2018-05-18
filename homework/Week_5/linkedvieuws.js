@@ -38,7 +38,7 @@ function makeMap(response) {
 	var exports_per_country = response[1]["total_exports"];
 
 	// draws map according data
-    var map = new Datamap({
+    	var map = new Datamap({
 			element: document.getElementById('container_map'),
 			scope: "world",
 			data: exports_per_country,
