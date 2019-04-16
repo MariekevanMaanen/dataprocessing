@@ -15,7 +15,7 @@ window.onload = function() {
 function GetData(error) {
 	if (error) throw error;
 
-	var data = "http://stats.oecd.org/SDMX-JSON/data/GREEN_GROWTH/AUT+BEL+CAN+CZE+DNK+FIN+FRA+DEU+ISL+IRL+ITA+NLD+NZL+NOR+POL+PRT+ESP+SWE+CHE+GBR.RE_NRG+PM_PWM+POPDEN/all?startTime=2000&endTime=2013&dimensionAtObservation=allDimensions";
+	var data = "https://stats.oecd.org/SDMX-JSON/data/GREEN_GROWTH/AUT+BEL+CAN+CZE+DNK+FIN+FRA+DEU+ISL+IRL+ITA+NLD+NZL+NOR+POL+PRT+ESP+SWE+CHE+GBR.RE_NRG+PM_PWM+POPDEN/all?startTime=2000&endTime=2013&dimensionAtObservation=allDimensions";
 	
 	d3.queue()
   	.defer(d3.request, data)
